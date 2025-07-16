@@ -5,6 +5,8 @@
 <!-- Using shift + cmd + v to preview the README file contents -->
 There are few steps which require for setting up [deputy-webapp](https://github.com/DeputyApp/deputy-webapp) codebase
 
+- For local setup [guide reference](https://github.com/DeputyApp/deputy-webapp/blob/main/docs/getting-started.md)
+
 (1). Please ensure you have installed exact node & docker veriosn,
 
 - Node version: `v18.16.0` by running this command:
@@ -27,19 +29,46 @@ Server: Docker Desktop 4.38.0 (181591)
   Version:          27.5.1
 ```
 
-(2). After cloned the codebase from deputy originzation github, there are few steps for starting up the deputy-webapp app locally,
-
-- Install all dependencies, here are the commands:
+(2). Git clone & install the relevant dependencies
 
 ```bash
-make fe.install # install the npm packages for the deputy-webapp codebase
-make fe.build # need to build the 
+git clone git@github.com:DeputyApp/deputy-webapp.git $HOME/dev/src/github.com/deputyapp/deputy-webapp
+cd $HOME/dev/src/github.com/deputyapp/deputy-webapp
+direnv allow
+```
+
+(3). After cloned the codebase from deputy originzation github, there are few steps for starting up the deputy-webapp app locally,
+
+- Run these commands in order to start the project locally:
+
+```bash
 make upd # to start with docker containers for deputy-webapp to start to run
-make seed # to seed some mock data for the deputy-webapp to display
-make fe.dev # start to
-# Sometimes, we might need to consider to debug for local codebase, there are few commands we could also run:
-# under the deputy-webapp root level of project folder
+make install.backend # install the backend required packages
+mkcert -install # install the mkcert library for generate the certificates
+# generate the certificate
+cd frontend/vnext/certs
+mkcert localhost 127.0.0.1 ::1 # generate the certifcates
+# do the same for vue codebase too
+cd frontend/vue/certs
+mkcert localhost 127.0.0.1 ::1 # generate the certifcates
+# back to project root directory
+cd $HOME/dev/src/github.com/deputyapp/deputy-webapp
+# build & install
 npm run vue:static # for build the vnext (Vue 3) project
+make fe.install # install the npm packages for the deputy-webapp codebase
+# make fe.build # need to build the vnext project (barely used)
+make seed # to seed some mock data for the deputy-webapp to display
+make fe.dev # start the project locally
+```
+
+(4). Go to local test [URL](https://business.dev.local.dpty.io/) with this login credentails for local journey
+
+```bash
+# Ensure the Deputy Cafe is running and also selected for localhost: 127.0.0.1
+# Ensure the Pritunl is also running and connect the VPN for apse2-shift-vpn-eng-1
+# For local login only
+Username: dev@deputec.com
+Password: password
 ```
 
 
@@ -59,7 +88,6 @@ make certs.create # issue a certificate
 make dns # try to make local site domain url: (https://business.dev.local.dpty.io) load a bit more faster
 make upd # start with devbox related docker containers
 # make upbd # for rebuild only - update docker containers
-# TO BE CONTINUED
 ```
 
 ## 3. `go-svc` & sub-services setup
@@ -87,8 +115,8 @@ cd nano ./cmd/svc-hr/.env
 APP_DEPUTY_GRAPHQL_PROXY_JWT_KEY=ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
 APP_DEPUTY_GRAPHQL_PROXY_HOSTNAME=THE_URL_APPLIED_FROM_NGROK_WEBSITE # https://dashboard.ngrok.com/domains
 # Ensure under go-svc folder, we run following commands to start the service
-TARGET=svc-hr mk aws.migrate.down && TARGET=svc-hr mk aws.migrate.up
-TARGET=svc-hr mk compose.up.build AUTH_ENABLED=1
+mk vendor && TARGET=svc-hr mk aws.migrate.down && TARGET=svc-hr mk aws.migrate.up && TARGET=svc-hr mk aws.seed && TARGET=svc-hr mk data
+TARGET=svc-hr mk compose.up.build
 ```
 
 ### Sub module `svc-hire` setup
@@ -105,16 +133,16 @@ SECRETS_MUX_TOKEN=ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
 SECRETS_MUX_TOKEN_ID=ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
 SECRETS_MUX_SIGNING_KEY_ID=ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
 SECRETS_MUX_SIGNING_KEY_SECRET=ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
-SECRETS_SEEK_CLIENT_ID: ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
-SECRETS_SEEK_CLIENT_SECRET: ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
-SECRETS_SEEK_AUDIENCE: ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
-SECRETS_SEEK_GRANT_TYPE: ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
-SECRETS_SEEK_SCHEME_ID: ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
-SECRETS_SEEK_WEBHOOK_SECRET: ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
-APP_CRON_RULE_TENANT_WHITELIST: ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
-SECRETS_JOB_TARGET_CLIENT_ID: ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
-SECRETS_JOB_TARGET_CLIENT_SECRET: ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
-SECRETS_JOB_TARGET_WEBHOOK_SECRET: ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS
+SECRETS_SEEK_CLIENT_ID: "ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS"
+SECRETS_SEEK_CLIENT_SECRET: "ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS"
+SECRETS_SEEK_AUDIENCE: "ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS"
+SECRETS_SEEK_GRANT_TYPE: "ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS"
+SECRETS_SEEK_SCHEME_ID: "ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS"
+SECRETS_SEEK_WEBHOOK_SECRET: "ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS"
+APP_CRON_RULE_TENANT_WHITELIST: "ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS"
+SECRETS_JOB_TARGET_CLIENT_ID: "ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS"
+SECRETS_JOB_TARGET_CLIENT_SECRET: "ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS"
+SECRETS_JOB_TARGET_WEBHOOK_SECRET: "ASK_TEAM_MEMBERS_TO_GET_THE_SECRETS"
 # Ensure under go-svc folder, we run following commands to start the service
 TARGET=svc-hire mk aws.migrate.down && TARGET=svc-hire mk aws.migrate.up && TARGET=svc-hire mk aws.seed
 TARGET=svc-hire mk compose.up.build AUTH_ENABLED=1
@@ -146,7 +174,6 @@ TARGET=svc-url AUTH_ENABLED=1 mk compose.up.build
 - `svc-dir`: is codebase for authenticate the subscription 
 
 ```bash
-TARGET=svc-url mk aws.migrate.down && TARGET=svc-url mk aws.migrate.up
 # TARGET=svc-dir mk aws.seed # Only when needed (Based on the requirements)
-TARGET=svc-url mk compose.up.build AUTH_ENABLED=1
+TARGET=svc-dir mk aws.migrate.down && TARGET=svc-dir mk aws.migrate.up && TARGET=svc-dir mk compose.up.build
 ```
