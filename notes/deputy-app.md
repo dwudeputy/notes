@@ -94,7 +94,7 @@ make upd # start with devbox related docker containers
 
 - `go-svc`: is the codebase which run bunch of services ~
 
-About the [go-sv github instruction](https://github.com/DeputyApp/go-svc?tab=readme-ov-file#1-clone-the-repo)
+About the [go-svc github instruction](https://github.com/DeputyApp/go-svc?tab=readme-ov-file#1-clone-the-repo)
 
 
 ### Sub module `svc-hr` setup
