@@ -33,13 +33,13 @@ nvm alias default v18.16.0
 ```
 <!-- Can make validation for 1 year -->
 
-![Github GPG Key](./assets/github-gpg-key.png)
+![Github GPG Key](../assets/github-gpg-key.png)
 
-![Github SSH Key](./assets/github-ssh-key.png)
+![Github SSH Key](../assets/github-ssh-key.png)
 
 Also ensure authorize the `DeputyAPP`
 
-![Github GPG Key](./assets/deputy-authorize.png)
+![Deputy Authorize](../assets/deputy-authorize.png)
 
 
 * So far, thats all the changes we can follow this updated note instead of original dev-setup document, but for the rest of the configurations, it would be reommanded to follow the original dev-setup document.
