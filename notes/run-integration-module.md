@@ -35,4 +35,4 @@ make fe.dev
 make upd
 ```
 
-Please follow the  original setup (documentat)[https://deputy.atlassian.net/wiki/spaces/COMPLIANCE/pages/3626730237/FlatFile+Local+setup] for the local testings
+Please follow the  original setup [documentat](https://deputy.atlassian.net/wiki/spaces/COMPLIANCE/pages/3626730237/FlatFile+Local+setup) for the local testings

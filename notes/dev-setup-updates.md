@@ -9,7 +9,7 @@ This note is mainly focus on updating the obslete part of document from the orig
 
 1. About the [docker](https://engineering.mgt.dpty.io/dev-setup.html#docker) setup guide,
 
-Please ensure we are currently need to install version `27.5.1`, here is the (link)[https://docs.docker.com/desktop/release-notes/#4380] for Mac & Windows OS.
+Please ensure we are currently need to install version `27.5.1`, here is the [link](https://docs.docker.com/desktop/release-notes/#4380) for Mac & Windows OS.
 
 2. About the [nvm](https://engineering.mgt.dpty.io/dev-setup.html#nvm) installation, please also ensure the node version must be `v18.16.0`
 
@@ -23,9 +23,9 @@ nvm alias default v18.16.0
 
 ### For `System Setup` Section
 
-1. For the section of (Installs)[http://engineering.mgt.dpty.io/systems-setup.html#installs], as a frontend engineer, currently its not required to install these libs (Can be ignored for now).
+1. For the section of [Installs](http://engineering.mgt.dpty.io/systems-setup.html#installs), as a frontend engineer, currently its not required to install these libs (Can be ignored for now).
 
-2. For the (Github setup)[https://engineering.mgt.dpty.io/systems-setup.html#github-setup] section, please ensure fowllowing keys are added:
+2. For the [Github setup](https://engineering.mgt.dpty.io/systems-setup.html#github-setup) section, please ensure fowllowing keys are added:
 
 ```bash
 - GPG Key
