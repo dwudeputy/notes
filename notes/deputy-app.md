@@ -107,7 +107,7 @@ About the [go-svc github instruction](https://github.com/DeputyApp/go-svc?tab=re
 # Once applied ngrok domain successfully, The URL should be looking like this:
 # eg: xxx-xxx.ngrok-free.app
 # Run the below command to start ngrok:
-ngrok http --url=internally-quick-boxer.ngrok-free.app 8888 # port 8888 refers to graphql access
+ngrok http --url=xxx-xxx-xxx.ngrok-free.app 8888 # (eg: ngrok http --url=internally-quick-boxer.ngrok-free.app 8888) # port 8888 refers to graphql access
 # Next step: Go to svc-hire/.env file and paste the secrets for the local
 cd go-svc
 cd nano ./cmd/svc-hr/.env
