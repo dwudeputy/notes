@@ -95,10 +95,59 @@ import { ref, computed } from 'vue';
 
 export const useUserStore = defineStore('user', () => {
   // States
-
+  const users = ref([]);
+  const currentUser = ref(null);
+  const isLoading = ref(false);
+  const error = ref(null);
   // Getters
-
+  const userCount = computed(() => users.value.length);
+  const activeUsers = computed(() => users.value.filter(user => user.isActive));
   // Actions
+  const fetchUsers = async () => {
+    isLoading.value = true;
+
+    try {
+      const response = await fetch('/api/users');
+      users.value = await response.json();
+    } catch (error) {
+      error.value = "Fetch users failed ..";
+      console.error("Fetch users error: ", error);
+    } finally {
+      isLoading.value = true;
+    }
+  }
+
+  const addNewUser = async (userPayload) => {
+    try {
+      const response = await fetch("/api/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringfy(userPayload)
+      });
+    } catch(error) {
+      error.value = "Failed to create a new user ..";
+      console.error("Create user error: ", error);
+    }
+  }
+
+  const setCurrentUser = (user) => {
+    currentUser.value = user;
+  }
+
+  return {
+    // States
+    users,
+    currentUser,
+    isLoading,
+    error,
+    // Getters
+    userCount,
+    activeUsers,
+    // Actions
+    fetchUsers,
+    addNewUser,
+    setCurrentUser
+  }
 });
 ```
 
