@@ -15,3 +15,30 @@ Here are the steps:
 ![Add ProdTest DNS Address](assets/images/add-prodtest-dns.png)
 > 4. (ONLY ask once) Also need to ask team members to invite and click 'Accept' to join the `coconut prodtst` app to start to do the prodtest !!
 > 5. Do a loom video record and attach it to Github comment area
+
+
+## Never change `coconutprodtest.au.deputy.com` url to your own URL, (PLEASE REMEMEBR 📝)
+
+For checking with all permissions setup: please add this `exec/administration/workforce/employee_roles` after `https://coconutprodtest.au.deputy.com/#/`
+
+Example: [https://coconutprodtest.au.deputy.com/#/exec/administration/workforce/employee_roles](https://coconutprodtest.au.deputy.com/#/exec/administration/workforce/employee_roles)
+
+
+## `hello sign` setup
+
+Reference [doc](https://deputy.atlassian.net/wiki/spaces/hr/pages/2522415137/Set+up+dropbox+sign+local+environment)
+
+Local setup steps:
+
+```bash
+# To Be Described
+```
+
+
+## For checking the leagacy CUE tickets, if no dieas, please check with following steps:
+
+- Always check with [help doc](https://help.deputy.com/hc/en-au/categories/7657951512591-Deputy-HR-AU-UK-US), if related with other teams, can check with this [url](https://help.deputy.com/hc/en-au) too
+
+- Do a confluence doc search based on `keywords`
+
+- Check with `Slack` chat history
