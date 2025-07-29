@@ -1,5 +1,7 @@
 # Daily Note
 
+- The note is more like daily knowledge insertion, better reach to myself for explanantion if not clear on some quick notes (Happy to explain) ~
+
 - This note is focus on writing the some essential notes for daily works
 
 ## `prodtest` setup
@@ -42,3 +44,25 @@ Local setup steps:
 - Do a confluence doc search based on `keywords`
 
 - Check with `Slack` chat history
+
+
+## For `web-hr` local setup
+
+Can just follow the [README](https://github.com/DeputyApp/web-hr/blob/main/README.md) file, run this command
+
+```bash
+npm run dev
+```
+
+to start local, thats it, nohing more so far.
+
+
+## For `Kudos` local setup
+
+Kudos requires `svc-dir` + `svc-cultre` modules to be up and running, here is the update notes for the original [documentation](https://deputy.atlassian.net/wiki/spaces/hr/pages/4658594008/Run+Kudos+in+Local)
+
+Changes are:
+
+1. Run this command `TARGET=svc-dir mk aws.migrate.down && TARGET=svc-dir mk aws.migrate.up` first, then run `TARGET=svc-dir AUTH_ENABLED=false mk compose.up.build`
+
+2. Before run step 3, please ensure Deputy Cafe need to run `localhost:127.0.0.1`

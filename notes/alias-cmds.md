@@ -1,8 +1,10 @@
-# Alias commands
+# Commands at Deputy
 
-This note is corresponding for generate certain alias for `.zshrc` file to run, so developers like me who doesn't need to manually type the commands one by one
+## The alias commands
 
-The common comamnds:
+- This part is corresponding for generate certain alias for `.zshrc` file to run, so developers like me who doesn't need to manually type the commands one by one
+
+The common alias comamnds:
 
 ```bash
 # commons
@@ -29,8 +31,14 @@ alias docker-svc-payrate="TARGET=svc-payrate mk aws.migrate.down && TARGET=svc-p
 alias go-svc-payrate="go run cmd/svc-payrate/dev/seed/main.go all"
 ```
 
-The debug commands:
+## The debug commands:
 
 ```bash
 tail -f _docker/logs/php/php.log # check logs for local deputy-webapp
+```
+
+## The general deputy app commands:
+
+```bash
+window.__APP__.sdk.session.getSetup()  # for getting the feature flag variables
 ```
