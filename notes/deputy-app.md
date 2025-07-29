@@ -57,6 +57,8 @@ cd $HOME/dev/src/github.com/deputyapp/deputy-webapp
 npm run vue:static # for build the vnext (Vue 3) project
 make fe.install # install the npm packages for the deputy-webapp codebase
 # make fe.build # need to build the vnext project (barely used)
+make upd # start docker containers
+# make updi # start docker container with integration services
 make seed # to seed some mock data for the deputy-webapp to display
 make fe.dev # start the project locally
 ```

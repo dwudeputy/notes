@@ -66,3 +66,10 @@ Changes are:
 1. Run this command `TARGET=svc-dir mk aws.migrate.down && TARGET=svc-dir mk aws.migrate.up` first, then run `TARGET=svc-dir AUTH_ENABLED=false mk compose.up.build`
 
 2. Before run step 3, please ensure Deputy Cafe need to run `localhost:127.0.0.1`
+
+
+## The HR team bible
+
+The [HR bible](https://help.deputy.com/hc/en-au/articles/4658199944847-Deputy-access-levels?gad_source=1&gad_campaignid=22731064046&gbraid=0AAAAADBqLlDJfWbTKm9matIfr2DAlrfhx&gclid=Cj0KCQjwnJfEBhCzARIsAIMtfKJzXQPTgFapDWI_sglWLCF3jIZNwo_-nLZsWEDf5JTjBYHKnBs145waAutAEALw_wcB)
+
+Please read it if you are part of HR team ~
