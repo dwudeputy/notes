@@ -25,6 +25,7 @@ corepack enable pnpm
   "url": "xxx-xxx.ngrok-free.app"
 }
 # into deputy-webapp `graphql-get-deputy-proxy.json` file in order to start the fe-nomono app
+# If haven't run the ngrok command, please run: ngrok http --url=xxx-xxx-xxx.ngrok-free.app 8888 # (eg: ngrok http --url=internally-quick-boxer.ngrok-free.app 
 # please ensure copy the "url": "xxx-xxx.ngrok-free.app" into deputy-webapp project
 
 # Start
