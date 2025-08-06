@@ -73,3 +73,5 @@ Changes are:
 The [HR bible](https://help.deputy.com/hc/en-au/articles/4658199944847-Deputy-access-levels?gad_source=1&gad_campaignid=22731064046&gbraid=0AAAAADBqLlDJfWbTKm9matIfr2DAlrfhx&gclid=Cj0KCQjwnJfEBhCzARIsAIMtfKJzXQPTgFapDWI_sglWLCF3jIZNwo_-nLZsWEDf5JTjBYHKnBs145waAutAEALw_wcB)
 
 Please read it if you are part of HR team ~
+
+## `nightly-prodtest-dns` slack channel for checking the prodtest DNS testing
