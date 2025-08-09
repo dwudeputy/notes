@@ -74,4 +74,35 @@ The [HR bible](https://help.deputy.com/hc/en-au/articles/4658199944847-Deputy-ac
 
 Please read it if you are part of HR team ~
 
-## `nightly-prodtest-dns` slack channel for checking the prodtest DNS testing
+## How to run unit tests at `vnext` deputy-webapp project
+
+```bash
+# RUN for specific (eg: Module) folder
+npm run test:unit -- --testPathPattern="modules/integrations"
+# RUN a specific unit test based on path pattern
+npm run test:unit -- --testPathPattern="bank-details-conditional-value.spec.ts"
+# RUN a specific unit test (single file)
+pnpm test:unit src/tests/lib/feature-gating.spec.ts --run
+```
+
+## `Preferences` APIs:
+
+This is the API endpoints which uses for saving some values into local stroage, it has prefix value: `API_PREF`
+
+```bash
+# For Prodtest Environment:
+https://coconuttestchangeurl.au.deputy.com/api/management/v2/employee/279/preferences
+# For Local Environment:
+https://business.dev.local.dpty.io/api/management/v2/employee/1/preferences
+```
+
+Also in browser, we could use this command to trigger API request and then manual control the preference values inside localstorage, by typing:
+
+```bash
+# { syncBackend: true }: means it will sync with backend
+# Pleas ensure the variable name must be WITHOUT API_PREF prefix, just the variable name ONLY ~
+window.globalLibs.PreferencesV2Service.updatePreference('VARIABLE_NAME_WITHOUT_API_PREF_PREFIX', value, { syncBackend: true })
+# window.globalLibs.PreferencesV2Service.updatePreference('KudosWelcomeBannerHidden', false, { syncBackend: true })
+```
+
+Reference [doc](https://deputy.atlassian.net/wiki/spaces/FPC/pages/2505146395/Webapp+User+Preferences) from confluence

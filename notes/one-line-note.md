@@ -10,15 +10,12 @@ This is the note only mark the daily tiny domain knowlwdge points.
 
 4. For `web-hr` codebase setup, just follow the [README file](https://github.com/DeputyApp/web-hr/blob/main/README.md) and run: npm run dev
 
-5. Run specific uni tests for vnext project:
-
-```bash
-# RUN for specific (eg: Module) folder
-npm run test:unit -- --testPathPattern="modules/integrations"
-# RUN a specific unit test (single file)
-npm run test:unit -- --testPathPattern="bank-details-conditional-value.spec.ts"
-```
+5. `FFEnum::MBD_293_BUSINESS_SETTINGS_V2 => true,` for turn on business settings v2
 
 6. deputy platform system config: `exec/config/system_config?-categ=6`
 
-7. 
+7. `nightly-prodtest-dns` slack channel for checking the prodtest DNS testing
+
+8. slack `deployment_prodtest` is the channel for fe-nomono app & `deployments` is the channel for deputy-webapp
+
+9. 
