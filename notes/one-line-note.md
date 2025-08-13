@@ -18,4 +18,6 @@ This is the note only mark the daily tiny domain knowlwdge points.
 
 8. slack `deployment_prodtest` is the channel for fe-nomono app & `deployments` is the channel for deputy-webapp
 
-9. 
+9. Abhishek Enterprise test instance id: `84b3759e-a812-4694-8e3d-d9cb1f960f14`
+
+10. 
