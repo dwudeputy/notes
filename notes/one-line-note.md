@@ -20,4 +20,8 @@ This is the note only mark the daily tiny domain knowlwdge points.
 
 9. Abhishek Enterprise test instance id: `84b3759e-a812-4694-8e3d-d9cb1f960f14`
 
-10. 
+10. For the document type -> System type: `cannot` modify fixed, Custom type: can be updated
+
+11. FE-Nomono Apps deployment video [record](https://drive.google.com/file/d/10IBPwmHeUoE-FKN6ylNYytIjnvFlt0ou/view)
+
+12.
