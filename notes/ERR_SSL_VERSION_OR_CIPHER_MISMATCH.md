@@ -39,7 +39,7 @@ mkcert localhost 127.0.0.1 ::1
 
 For the original references:
 
-- Helpful [slack link](https://deputy.slack.com/archives/D095TE54PD0/p1752560985688749)
+- Helpful [slack link](https://deputy.slack.com/archives/CNGPL1F7U/p1751441188005089)
 - Confluence page [link](https://deputy.atlassian.net/wiki/spaces/FPC/pages/4340711564/VJSM+Using+Vite+for+Local+Dev)
 
 
