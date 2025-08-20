@@ -116,4 +116,47 @@ Conclusion: No good way found so far, has to turn oof all docker containers and 
 
 Other devs tries - reference: [slack chat](https://deputy.slack.com/archives/C04CTF1HF9D/p1741906810669149?thread_ts=1741863392.508929&cid=C04CTF1HF9D)
 
-## 
+## `PRF_653` FF has been removed (Feature Gating Plan)
+
+In terms of `PRF_653` FF get deleted, the replacement solution is to (PWF-6997 related):
+
+- Using postman to update edition to `40` from `1`
+![Postman update the Edition value](./assets//images/PRF_653.png)
+- Using `SettingConstants::PEOPLE_TAB_PEOPLE_CUSTOM_FIELDS_LINK => Features::FOUNDATIONS_SHIFT_CUSTOM_FIELDS`, inside `Tenant/Domain/BusinessSetting/Service/FeatureGating/FeatureGateSettingVisibilityMapper.php` file
+
+This is how to trigger local testing ~
+
+The Feature Gating Plan Definition: [link](https://deputy.atlassian.net/wiki/spaces/GROW/pages/4662034532/Feature+Gating+by+Plans+and+Add-ons)
+
+
+## About the local onboarding dev setup (Issues faced)
+
+About local onboarding dev setup: [link](https://deputy.atlassian.net/wiki/spaces/hr/pages/404949111/Employee+Onboarding+DEV+setup)
+
+Please follow this thread for more info: [link](https://deputy.slack.com/archives/C075FG0CNKF/p1755576394139399)
+
+Please remember suggestion form team member:
+
+That's the CORS issue with `svc-hr` as it now only allows request from port 8888.
+
+Albert's solution works for onboarding only.
+
+If you still need to turn on ngrok, then open `svc-hr/data/config/app.yaml`, search for `"localhost:8888"` and replace with `"localhost:8889"`, then run `TARGET=svc-hr mk data & TARGET=svc-hr mk compose.upbd` ~
+
+PLEASE PLEASE FOLLOW THIS INSTRUCTIONS !!!!!!!!!!!!!!! (IMPORTANT ONE)
+This is the correction for the original documentation.
+
+(1). When we copy the link from `onboarding` API response, eg: `https://api.local.dpty.io/u/31VNJxCssNEyietCKev56AP2O06`
+![]()
+(2). We just opened it, then we will get yne token based new link, and then we just need to change that token based new link (eg: `https://webdev.local.dpty.io/#/onboarding/31VNJubQSEABhIOk3DmKHwsb8qJ;eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhcGkuZGVwdXR5LmNvbS91cmwvdjEiLCJleHAiOjE3NTU2NDk5MDIsImlhdCI6MTc1NTY0OTYwMiwiaXNzIjoiYXBpLmRlcHV0eS5jb20vdXJsL3YxIiwianRpIjoiMzFXcElRNnpuVTlaNEtFUmtYelVUOXBQNlVRIiwibmJmIjoxNzU1NjQ5NjAyLCJzdWIiOiJhcGkuZGVwdXR5LmNvbS91cmwvdjEvc2hvcnQtdXJscy8zMVZOSnlTb3NsSm5pMzh4WXJJU2l4WllrbmsifQ.PZd8e7-BT0C2LvS4dFkWvXshvZaXwkEcYpWjJmR4gKf97GLkqhIgfUJpdaB36ARdF_mjtW3EDob3STpAuis2Sg`) replace `https://webdev.local.dpty.io` with `localhost:8888 or 8889` to open the local onboarding form link
+```
+
+
+## How to test 3 environments (AU/UK/US) for the feature code development
+
+- Run `make seed.e2e` at deputy-webapp terminal
+- Run `make fe.dev` at deputy-webapp terminal
+Open link: `once.local.dpty.io` link and ensure VPN + Deputy Cafe (localhost) is on as usual
+Type `dev.deputec.com` + `password` for login
+
+Thats it, now we are able to view the 3 environments test instances for local dev environment
