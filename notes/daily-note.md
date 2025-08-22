@@ -154,9 +154,11 @@ This is the correction for the original documentation.
 
 ## How to test 3 environments (AU/UK/US) for the feature code development
 
+- Run `make upd` at deputy-webapp terminal
 - Run `make seed.e2e` at deputy-webapp terminal
 - Run `make fe.dev` at deputy-webapp terminal
-Open link: `once.local.dpty.io` link and ensure VPN + Deputy Cafe (localhost) is on as usual
+Open link: `https://once.local.dpty.io` link and ensure VPN + Deputy Cafe (localhost) is on as usual
+(Soem times, need to re-run `make dns` under devbox codebase to restart the dns)
 Type `dev.deputec.com` + `password` for login
 
 Thats it, now we are able to view the 3 environments test instances for local dev environment
