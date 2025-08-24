@@ -24,4 +24,8 @@ This is the note only mark the daily tiny domain knowlwdge points.
 
 11. FE-Nomono Apps deployment video [record](https://drive.google.com/file/d/10IBPwmHeUoE-FKN6ylNYytIjnvFlt0ou/view)
 
-12.
+12. `formio` only `US` region
+
+13. `web-hr` no feature flag
+
+14. 

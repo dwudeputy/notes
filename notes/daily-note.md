@@ -147,18 +147,21 @@ PLEASE PLEASE FOLLOW THIS INSTRUCTIONS !!!!!!!!!!!!!!! (IMPORTANT ONE)
 This is the correction for the original documentation.
 
 (1). When we copy the link from `onboarding` API response, eg: `https://api.local.dpty.io/u/31VNJxCssNEyietCKev56AP2O06`
-![]()
+![Example AI Response](./assets/images/PWF-7122-local-onboarding-link.png)
 (2). We just opened it, then we will get yne token based new link, and then we just need to change that token based new link (eg: `https://webdev.local.dpty.io/#/onboarding/31VNJubQSEABhIOk3DmKHwsb8qJ;eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhcGkuZGVwdXR5LmNvbS91cmwvdjEiLCJleHAiOjE3NTU2NDk5MDIsImlhdCI6MTc1NTY0OTYwMiwiaXNzIjoiYXBpLmRlcHV0eS5jb20vdXJsL3YxIiwianRpIjoiMzFXcElRNnpuVTlaNEtFUmtYelVUOXBQNlVRIiwibmJmIjoxNzU1NjQ5NjAyLCJzdWIiOiJhcGkuZGVwdXR5LmNvbS91cmwvdjEvc2hvcnQtdXJscy8zMVZOSnlTb3NsSm5pMzh4WXJJU2l4WllrbmsifQ.PZd8e7-BT0C2LvS4dFkWvXshvZaXwkEcYpWjJmR4gKf97GLkqhIgfUJpdaB36ARdF_mjtW3EDob3STpAuis2Sg`) replace `https://webdev.local.dpty.io` with `localhost:8888 or 8889` to open the local onboarding form link
-```
+
+One of workable examples: `http://localhost:8888/#/onboarding/31dw8Rc2ao3DNczowt8oVJ5v21V;eyJhbGciOiJIUzUxMiIs[…]7BlyPTSY_V5JNi77RgFi3HbVhVhGlXpA1G1LltX_sJnlrG_m7lhXpOPS-VDeg`
 
 
 ## How to test 3 environments (AU/UK/US) for the feature code development
 
-- Run `make upd` at deputy-webapp terminal
-- Run `make seed.e2e` at deputy-webapp terminal
-- Run `make fe.dev` at deputy-webapp terminal
+- Run `make upd` at deputy-webapp terminal (restart container)
+- Run `make seed.e2e` at deputy-webapp terminal (start e2e seed mode)
+- Run `make fe.dev` at deputy-webapp terminal (runn app)
 Open link: `https://once.local.dpty.io` link and ensure VPN + Deputy Cafe (localhost) is on as usual
 (Soem times, need to re-run `make dns` under devbox codebase to restart the dns)
 Type `dev.deputec.com` + `password` for login
 
 Thats it, now we are able to view the 3 environments test instances for local dev environment
+
+## 
