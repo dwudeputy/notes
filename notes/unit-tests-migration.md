@@ -6,7 +6,8 @@ This note is focus on unit tests migration from `Jest` to `Vitest`.
 
 - Long-term codebase maintenance purpose
 - Speed Performance (Faster execution)
-- Try to keep the unit tests a bit DRY (instead of define repeat code in multiple test files)
+- Try to keep the unit tests a bit DRY (instead of define repeat code in multiple test files) Some findings so far, [PR example](https://github.com/DeputyApp/deputy-webapp/pull/30320/files#diff-bbb0fafa5f568c0af0ad09065d0d2e00e2082b2539b457deb26de28ff0218b16R12) and ![exisiting-each-file-copilot-mocking-example](./assets/images/exisiting-each-file-copilot-mocking-example.png)
+and etc
 
 ## Reference documentation
 
@@ -31,7 +32,7 @@ The propsoed solution is mainly focus on one of folders (`frontend/vnext/src/app
 
 **To sum up, introducing `__mocks__` to the Vitest is mainly for providing an additional way for developers to write unit tests for the codebase, developers are still be able to utlise `shallowMount()` and `mount()` way to write unit tests.**
 
-### Actual Solution
+### Actual Solution in action
 
 Planning to introduce `__mocks__` strategy as part of Vitest unit test migration task.
 

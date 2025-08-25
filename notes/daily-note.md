@@ -138,12 +138,10 @@ Please follow this thread for more info: [link](https://deputy.slack.com/archive
 Please remember suggestion form team member:
 
 That's the CORS issue with `svc-hr` as it now only allows request from port 8888.
-
 Albert's solution works for onboarding only.
-
 If you still need to turn on ngrok, then open `svc-hr/data/config/app.yaml`, search for `"localhost:8888"` and replace with `"localhost:8889"`, then run `TARGET=svc-hr mk data & TARGET=svc-hr mk compose.upbd` ~
 
-PLEASE PLEASE FOLLOW THIS INSTRUCTIONS !!!!!!!!!!!!!!! (IMPORTANT ONE)
+PLEASE PLEASE FOLLOW THE BELOW INSTRUCTION !!!!!!!!!!!!!!! (IMPORTANT ONE)
 This is the correction for the original documentation.
 
 (1). When we copy the link from `onboarding` API response, eg: `https://api.local.dpty.io/u/31VNJxCssNEyietCKev56AP2O06`
@@ -155,7 +153,7 @@ One of workable examples: `http://localhost:8888/#/onboarding/31dw8Rc2ao3DNczowt
 
 ## How to test 3 environments (AU/UK/US) for the feature code development
 
-- Run `make upd` at deputy-webapp terminal (restart container)
+- Run `make upd` at deputy-webapp terminal (restart container) [Also, sometimes, need to restart docker cobtainer and then seed again, sometimes not working properly after few rounds of testings]
 - Run `make seed.e2e` at deputy-webapp terminal (start e2e seed mode)
 - Run `make fe.dev` at deputy-webapp terminal (runn app)
 Open link: `https://once.local.dpty.io` link and ensure VPN + Deputy Cafe (localhost) is on as usual
