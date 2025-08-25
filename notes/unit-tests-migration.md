@@ -6,7 +6,7 @@ This note is focus on unit tests migration from `Jest` to `Vitest`.
 
 - Long-term codebase maintenance purpose
 - Speed Performance (Faster execution)
-- Try to keep the unit tests a bit DRY (instead of define repeat code in multiple test files) Some findings so far, [PR example](https://github.com/DeputyApp/deputy-webapp/pull/30320/files#diff-bbb0fafa5f568c0af0ad09065d0d2e00e2082b2539b457deb26de28ff0218b16R12) and ![exisiting-each-file-copilot-mocking-example](./assets/images/exisiting-each-file-copilot-mocking-example.png)
+- Try to keep the unit tests a bit DRY (instead of define repeat code in multiple test files) Some findings so far, [PR example](https://github.com/DeputyApp/deputy-webapp/pull/30320/files#diff-bbb0fafa5f568c0af0ad09065d0d2e00e2082b2539b457deb26de28ff0218b16R12) and exisiting examples ![exisiting-each-file-copilot-mocking-example](./assets/images/exisiting-each-file-copilot-mocking-example.png)
 and etc
 
 ## Reference documentation
