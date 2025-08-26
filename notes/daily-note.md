@@ -80,7 +80,12 @@ Please read it if you are part of HR team ~
 # RUN for specific (eg: Module) folder
 npm run test:unit -- --testPathPattern="modules/integrations"
 # RUN a specific unit test based on path pattern
-npm run test:unit -- --testPathPattern="bank-details-conditional-value.spec.ts"
+npm run test:unit:dev -- src/apps/hr/src/modules/forms/tests/components/forms-onboarding.spec.js
+```
+
+## How to run `fe-nomono` codebase unit test (Just one example)
+
+```bash
 # RUN a specific unit test (single file)
 pnpm test:unit src/tests/lib/feature-gating.spec.ts --run
 ```

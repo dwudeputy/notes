@@ -269,6 +269,8 @@ describe('Performance Benchmark: Real Components vs Mocks', () => {
 we could run this comamnd to see the details report:
 
 ```bash
+# Run vitest by folder
+npx vitest run src/apps/culture
 # file name + path definition: frontend/vnext/src/apps/culture/benchmark-performance-proof.spec.js
 npx vitest run src/apps/culture/benchmark-performance-proof.spec.js
 ```
