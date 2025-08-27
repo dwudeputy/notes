@@ -142,7 +142,7 @@ Please follow this thread for more info: [link](https://deputy.slack.com/archive
 
 Please remember suggestion form team member:
 
-That's the CORS issue with `svc-hr` as it now only allows request from port 8888.
+That's the CORS issue with `svc-hr` as it now only allows request from port `8888`.
 Albert's solution works for onboarding only.
 If you still need to turn on ngrok, then open `svc-hr/data/config/app.yaml`, search for `"localhost:8888"` and replace with `"localhost:8889"`, then run `TARGET=svc-hr mk data & TARGET=svc-hr mk compose.upbd` ~
 
@@ -151,7 +151,8 @@ This is the correction for the original documentation.
 
 (1). When we copy the link from `onboarding` API response, eg: `https://api.local.dpty.io/u/31VNJxCssNEyietCKev56AP2O06`
 ![Example AI Response](./assets/images/PWF-7122-local-onboarding-link.png)
-(2). We just opened it, then we will get yne token based new link, and then we just need to change that token based new link (eg: `https://webdev.local.dpty.io/#/onboarding/31VNJubQSEABhIOk3DmKHwsb8qJ;eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhcGkuZGVwdXR5LmNvbS91cmwvdjEiLCJleHAiOjE3NTU2NDk5MDIsImlhdCI6MTc1NTY0OTYwMiwiaXNzIjoiYXBpLmRlcHV0eS5jb20vdXJsL3YxIiwianRpIjoiMzFXcElRNnpuVTlaNEtFUmtYelVUOXBQNlVRIiwibmJmIjoxNzU1NjQ5NjAyLCJzdWIiOiJhcGkuZGVwdXR5LmNvbS91cmwvdjEvc2hvcnQtdXJscy8zMVZOSnlTb3NsSm5pMzh4WXJJU2l4WllrbmsifQ.PZd8e7-BT0C2LvS4dFkWvXshvZaXwkEcYpWjJmR4gKf97GLkqhIgfUJpdaB36ARdF_mjtW3EDob3STpAuis2Sg`) replace `https://webdev.local.dpty.io` with `localhost:8888 or 8889` to open the local onboarding form link
+
+(2). We just opened it in a browser tab, then we will get yne token based new link, and then we just need to change that token based new link (eg: `https://webdev.local.dpty.io/#/onboarding/31VNJubQSEABhIOk3DmKHwsb8qJ;eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhcGkuZGVwdXR5LmNvbS91cmwvdjEiLCJleHAiOjE3NTU2NDk5MDIsImlhdCI6MTc1NTY0OTYwMiwiaXNzIjoiYXBpLmRlcHV0eS5jb20vdXJsL3YxIiwianRpIjoiMzFXcElRNnpuVTlaNEtFUmtYelVUOXBQNlVRIiwibmJmIjoxNzU1NjQ5NjAyLCJzdWIiOiJhcGkuZGVwdXR5LmNvbS91cmwvdjEvc2hvcnQtdXJscy8zMVZOSnlTb3NsSm5pMzh4WXJJU2l4WllrbmsifQ.PZd8e7-BT0C2LvS4dFkWvXshvZaXwkEcYpWjJmR4gKf97GLkqhIgfUJpdaB36ARdF_mjtW3EDob3STpAuis2Sg`) replace `https://webdev.local.dpty.io` with `localhost:8888 or 8889` to open the local onboarding form link
 
 One of workable examples: `http://localhost:8888/#/onboarding/31dw8Rc2ao3DNczowt8oVJ5v21V;eyJhbGciOiJIUzUxMiIs[…]7BlyPTSY_V5JNi77RgFi3HbVhVhGlXpA1G1LltX_sJnlrG_m7lhXpOPS-VDeg`
 
