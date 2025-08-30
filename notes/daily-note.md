@@ -81,6 +81,10 @@ Please read it if you are part of HR team ~
 npm run test:unit -- --testPathPattern="modules/integrations"
 # RUN a specific unit test based on path pattern
 npm run test:unit:dev -- src/apps/hr/src/modules/forms/tests/components/forms-onboarding.spec.js
+# Run Vitest single file
+npm run test:vitest:static -- shift-pulse-settings-modal.spec.ts
+# Run Jest single file
+npm run test:jest:unit -- --testPathPattern=forms-onboarding.spec.js
 ```
 
 ## How to run `fe-nomono` codebase unit test (Just one example)
