@@ -172,4 +172,18 @@ Type `dev.deputec.com` + `password` for login
 
 Thats it, now we are able to view the 3 environments test instances for local dev environment
 
-## 
+## How to run openapi locally
+
+Here are few step to follow:
+
+- Make sure your `devbox` is running
+
+- Connect to Pritunl `eng-1`
+
+- Using `Deputy Cafe` to change DNS of Wifi to `localhost`.
+
+- Run `mk openapi.up` at `go-svc` repo and go to `https://openapi.local.dpty.io/.`
+
+- If there are any issue, go to`devbox` and do `make dns`
+
+##
