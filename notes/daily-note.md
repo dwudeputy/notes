@@ -196,3 +196,12 @@ Password: password
 ```
 
 For Non-local environment, we could follow one of slack [history conversation](https://deputy.slack.com/archives/C075FG0CNKF/p1746593824027319?thread_ts=1746512264.934199&cid=C075FG0CNKF) to make it happen
+
+## Update YAML Config file
+
+- Everytime, if updated the yaml files inside `svc-hr` codebase, please remember to run command to generate the complied versions of changes for backend engineers to follow up with the latest code changes
+
+```bash
+# go cmd: 
+mk gen TARGET=svc-hr CODEGEN_LIMIT_PARALLEL=true CODEGEN_MAX_PARALLEL=24
+```
