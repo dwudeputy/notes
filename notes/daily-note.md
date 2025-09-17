@@ -191,8 +191,8 @@ Here are few step to follow:
 For local environement, we could use another account
 
 ```
-Username: manager@deputec.com
-Password: password
+Username: `manager@deputec.com`
+Password: `password`
 ```
 
 For Non-local environment, we could follow one of slack [history conversation](https://deputy.slack.com/archives/C075FG0CNKF/p1746593824027319?thread_ts=1746512264.934199&cid=C075FG0CNKF) to make it happen
